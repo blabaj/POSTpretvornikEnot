@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Dobrodošli v pretvorniku enot</h1>
+    <form method="post" action="/"><br>
+        <select name="pretvorbaVnos">
+            <option value="CvF">Iz ºC v ºF</option>
+            <option value="FvC">Iz ºF v ºC</option>
+            <option value="KMvM">Iz Km v Milije</option>
+            <option value="MvKM">Iz Milij v Km</option>
+             <option value="KMHvMS">Iz Km/h v m/s </option>
+            <option value="MSVKMH">Iz m/s v Km/h</option>
+        </select><br>
+        <br>
+        <input type="text" name="Vnos"><br>
+        <br>
+        <input type="submit" value="Pretvori!">
+
+         {% if rezultat %} Pretvorba: {{ rezultat }} {% else %} {% endif %}
+
+
+    </form>
+</body>
+</html>
